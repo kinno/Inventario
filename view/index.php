@@ -28,15 +28,21 @@ and open the template in the editor.
                 <div class="row">
                     <div class="col-sm-2 sidebar">
                         <ul class="nav nav-pills nav-stacked" id="navBar">
-                            <li role="presentation" class="active" onclick="cambiaMenu(this,1)"><a href="#">Inicio</a></li>
-                            <li role="presentation" onclick="cambiaMenu(this,2)"><a href="#">Producto</a></li>
-                            <li role="presentation" onclick="cambiaMenu(this,3)"><a href="#">Promociones</a></li>
-                            <li role="presentation" onclick="cambiaMenu(this,4)"><a href="#">Clientes</a></li>
-                            <li role="presentation" onclick="cambiaMenu(this,5)"><a href="#">Ventas</a></li>
+                            <li role="presentation" class="active" onclick="cambiaMenu(this, 1)"><a href="#">Inicio</a></li>
+                            <li role="presentation" onclick="cambiaMenu(this, 2)"><a href="#">Producto</a></li>
+                            <li role="presentation" onclick="cambiaMenu(this, 3)"><a href="#">Promociones<span class="glyphicon glyphicon-arrow-down"></span></a></li>
+                            <div id="submenu" style="display: none;">
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li onclick="cambiaMenu(this, 4)" ><a href="#">Consulta</a></li>
+                                    <li onclick="cambiaMenu(this, 5)" ><a href="#">Capturar promociones</a></li>
+                                </ul>
+                            </div>
+                            <li role="presentation" onclick="cambiaMenu(this, 6)"><a href="#">Clientes</a></li>
+                            <li role="presentation" onclick="cambiaMenu(this, 7)"><a href="#">Ventas</a></li>
                         </ul>
-<!--                        <ul class="nav nav-pills nav-stacked navFooter">
-                            <li><a href="https://www.marykayintouch.com.mx/Login/Login.aspx?ReturnURL=%2f/Page.aspx?PageID=13416" target="_blank"><img title="En Contacto" style="width:100%" src="images/logoMkWeb.png"/></a></li>
-                        </ul>-->
+                        <!--                        <ul class="nav nav-pills nav-stacked navFooter">
+                                                    <li><a href="https://www.marykayintouch.com.mx/Login/Login.aspx?ReturnURL=%2f/Page.aspx?PageID=13416" target="_blank"><img title="En Contacto" style="width:100%" src="images/logoMkWeb.png"/></a></li>
+                                                </ul>-->
                         <div class="col-sm-2 navFooter">
                             <a href="https://www.marykayintouch.com.mx/Login/Login.aspx?ReturnURL=%2f/Page.aspx?PageID=13416" target="_blank"><img title="En Contacto" style="width:75%" src="images/logoMkWeb.png"/></a>
                         </div>    
@@ -45,7 +51,7 @@ and open the template in the editor.
                         <h1>PRICIPAL</h1> 
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </body>

@@ -8,17 +8,27 @@ function cambiaMenu(elem, page) {
     $(elem).addClass("active");
     switch (page) {
         case 1:
+            $("#submenu:visible").toggle("slow");
             break;
         case 2:
+            $("#submenu:visible").toggle("slow");
             $("#mainContainer").load("/Inventario/view/Productos/productos.php");
             break;
         case 3:
-            $("#mainContainer").load("/Inventario/view/Promociones/promociones.php");
+            $("#submenu:hidden").toggle("slow");
             break;
         case 4:
-            $("#mainContainer").load("/Inventario/view/Clientes/clientes.php");
+            $("#mainContainer").load("/Inventario/view/Promociones/listadoPromociones.php");
             break;
         case 5:
+            $("#mainContainer").load("/Inventario/view/Promociones/promociones.php");
+            break;
+        case 6:
+            $("#submenu:visible").toggle("slow");
+            $("#mainContainer").load("/Inventario/view/Clientes/clientes.php");
+            break;
+        case 7:
+            $("#submenu:visible").toggle("slow");
             break;
     }
 }
