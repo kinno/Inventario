@@ -12,10 +12,11 @@ and open the template in the editor.
         <meta name="description" content="">
         <meta name="author" content="">
         <title>Sistema de Inventario y Ventas - Unidad Rosal</title>
-        <link href="css/bootstrap.css" rel="stylesheet">
-        <link href="css/bootstrap-theme.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.min.css" rel="stylesheet">
         <link href="css/estilos.css" rel="stylesheet">
         <script src="js/jquery-1.11.3.js"></script>
+        <script src="js/bootbox.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/funcionesMain.js"></script>
     </head>
@@ -29,8 +30,9 @@ and open the template in the editor.
                         <ul class="nav nav-pills nav-stacked" id="navBar">
                             <li role="presentation" class="active" onclick="cambiaMenu(this,1)"><a href="#">Inicio</a></li>
                             <li role="presentation" onclick="cambiaMenu(this,2)"><a href="#">Producto</a></li>
-                            <li role="presentation" onclick="cambiaMenu(this,3)"><a href="#">Clientes</a></li>
-                            <li role="presentation" onclick="cambiaMenu(this,4)"><a href="#">Ventas</a></li>
+                            <li role="presentation" onclick="cambiaMenu(this,3)"><a href="#">Promociones</a></li>
+                            <li role="presentation" onclick="cambiaMenu(this,4)"><a href="#">Clientes</a></li>
+                            <li role="presentation" onclick="cambiaMenu(this,5)"><a href="#">Ventas</a></li>
                         </ul>
 <!--                        <ul class="nav nav-pills nav-stacked navFooter">
                             <li><a href="https://www.marykayintouch.com.mx/Login/Login.aspx?ReturnURL=%2f/Page.aspx?PageID=13416" target="_blank"><img title="En Contacto" style="width:100%" src="images/logoMkWeb.png"/></a></li>

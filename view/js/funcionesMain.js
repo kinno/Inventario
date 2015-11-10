@@ -10,12 +10,15 @@ function cambiaMenu(elem, page) {
         case 1:
             break;
         case 2:
-            $("#mainContainer").load("/Inventario/view/Inventario/inventario.php");
+            $("#mainContainer").load("/Inventario/view/Productos/productos.php");
             break;
         case 3:
-            $("#mainContainer").load("/Inventario/view/Clientes/clientes.php");
+            $("#mainContainer").load("/Inventario/view/Promociones/promociones.php");
             break;
         case 4:
+            $("#mainContainer").load("/Inventario/view/Clientes/clientes.php");
+            break;
+        case 5:
             break;
     }
 }

@@ -1,8 +1,8 @@
-var tablaClientes;
+var tablaProductos;
 var indiceEditar;
 var arrayEliminados =[];
 $(document).ready(function () {
-    tablaClientes = $("#tablaClientes").DataTable({"retrieve": true, "ordering": false, "sPaginationType": "full_numbers",
+    tablaProductos = $("#tablaProductos").DataTable({"retrieve": true, "ordering": false, "sPaginationType": "full_numbers",
         "oLanguage": {
             "sProcessing": "&nbsp; &nbsp; &nbsp;Procesando...",
             "sLengthMenu": "Mostrar _MENU_ registros",
@@ -28,13 +28,13 @@ $(document).ready(function () {
             },
         }, });
     
-    $("input [type=date]").datepicker();
-    
+//    $("input [type=date]").datepicker();
+    $(".number").autoNumeric();
     $("#abreModal").click(function () {
-        limpiar("modalCliente");
-        $("#actualizarCliente").hide();
-        $("#agregaCliente").show();
-        $("#modalCliente").modal("show");
+        limpiar("modalProductos");
+        $("#actualizarProducto").hide();
+        $("#agregaProducto").show();
+        $("#modalProductos").modal("show");
     });
 
     $("#guardarClientes").click(function () {
