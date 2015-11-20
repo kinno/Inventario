@@ -1,5 +1,5 @@
 
-<!--<link rel="stylesheet" type="text/css" href="/Inventario/view/css/datatables.css">-->
+<link rel="stylesheet" type="text/css" href="/Inventario/view/css/datatables.css">
 <link rel="stylesheet" type="text/css" href="/Inventario/view/css/dataTables.bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="/Inventario/view/css/bootstrap-datepicker.min.css">
 <script type="text/javascript" src="/Inventario/view/js/datatables.js"></script>
@@ -25,18 +25,18 @@
     <div class="row form-group">
         <div class="col-sm-12">
             <div class="input-group col-sm-12">
-                <table id="tablaClientes" class="table table-striped table-bordered" width="100%">
+                <table id="tablaClientes" class="table table-bordered" width="100%">
                     <thead>
-                        <tr ><td >idCliente</td><td >Nombre</td><td >Apellido paterno</td><td >Apellido materno</td><td >Dirección</td><td >Fecha de nacimiento</td><td >Teléfono</td><td >E-mail</td><td >idTipoCliente</td><td>Tipo de cliente</td><td></td><td ></td></tr>
+                        <tr ><td >idCliente</td><td >Clave de cliente</td><td >Nombre</td><td >Apellido paterno</td><td >Apellido materno</td><td >Dirección</td><td >Fecha de nacimiento</td><td >Teléfono</td><td >E-mail</td><td >idTipoCliente</td><td>Tipo de cliente</td><td></td><td ></td></tr>
                     </thead>
                 </table>
             </div>
         </div>
     </div>
-    
+
     <div class="row form-group">
         <div class="col-sm-2 col-md-offset-10">
-           <div class="input-group ">
+            <div class="input-group ">
                 <span class="btn btn-default" id="guardarClientes">Guardar</span>
             </div>
         </div>
@@ -107,7 +107,7 @@
                             <div class="input-group input-group-sm">
                                 <span class="input-group-addon" id="sizing-addon6">Tipo de cliente:</span>
                                 <select class="form-control" id="idTipCliente">
-<!--                                    <option value="-1" selected="true">Seleccione...</option>-->
+                                    <!--                                    <option value="-1" selected="true">Seleccione...</option>-->
                                     <option value="1">Consultora de unidad</option>
                                     <option value="2">Consultora externa</option>
                                     <option value="3">Cliente ordinario</option>
@@ -115,11 +115,20 @@
                             </div>
                         </div>
                     </div><!-- /.row -->
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-addon" id="sizing-addon5">Clave de cliente:</span>
+                                <input type="text" class="form-control number" placeholder="" id="cveCliente" name="cveCliente" readonly="true" aria-describedby="sizing-addon3">
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="modal-footer">
                         <div class="form-group">
-                            <div class="col-xs-18 col-md-12">
-                                <div class="col-xs-4 col-md-6">
+                            <div class="col-md-12">
+
+                                <div class="col-md-6">
                                     <span id="agregaCliente" name="agregaCliente" onclick="agregarCliente();" class="btn btn-primary " style="display: none;">Agregar</span>
                                     <span id="actualizarCliente" name="actualizarCliente" onclick="modificarCliente();" class="btn btn-primary" style="">Actualizar</span>
                                 </div>

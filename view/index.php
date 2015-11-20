@@ -21,22 +21,17 @@ and open the template in the editor.
         <script src="js/funcionesMain.js"></script>
     </head>
     <body>
+        
         <div id="wrapper">
-            <nav class="navbar navbar-default">                
-            </nav>
+<!--            <nav class="navbar navbar-default">                
+            </nav>-->
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-2 sidebar">
                         <ul class="nav nav-pills nav-stacked" id="navBar">
                             <li role="presentation" class="active" onclick="cambiaMenu(this, 1)"><a href="#">Inicio</a></li>
                             <li role="presentation" onclick="cambiaMenu(this, 2)"><a href="#">Producto</a></li>
-                            <li role="presentation" onclick="cambiaMenu(this, 3)"><a href="#">Promociones<span class="glyphicon glyphicon-arrow-down"></span></a></li>
-                            <div id="submenu" style="display: none;">
-                                <ul class="nav nav-pills nav-stacked">
-                                    <li onclick="cambiaMenu(this, 4)" ><a href="#">Consulta</a></li>
-                                    <li onclick="cambiaMenu(this, 5)" ><a href="#">Capturar promociones</a></li>
-                                </ul>
-                            </div>
+                            <li role="presentation" onclick="cambiaMenu(this, 5)"><a href="#">Promociones</a></li>
                             <li role="presentation" onclick="cambiaMenu(this, 6)"><a href="#">Clientes</a></li>
                             <li role="presentation" onclick="cambiaMenu(this, 7)"><a href="#">Ventas</a></li>
                         </ul>

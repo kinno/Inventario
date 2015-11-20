@@ -1,5 +1,5 @@
 
-<!--<link rel="stylesheet" type="text/css" href="/Inventario/view/css/datatables.css">-->
+<link rel="stylesheet" type="text/css" href="/Inventario/view/css/datatables.css">
 <link rel="stylesheet" type="text/css" href="/Inventario/view/css/dataTables.bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="/Inventario/view/css/bootstrap-datepicker.min.css">
 <script type="text/javascript" src="/Inventario/view/js/datatables.js"></script>
@@ -23,9 +23,47 @@
                         <div class="input-group input-group-sm">
                             <span class="input-group-addon" id="sizing-addon1">Clave de producto:</span>
                             <input type="text" class="form-control" aria-describedby="sizing-addon1" id="cveProducto" name="cveProducto">
+                            <input type="hidden" class="form-control" aria-describedby="sizing-addon1" id="idPromocion" name="idPromocion">
                         </div>
                     </div>
                 </div>
+                
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <div class="well">
+                            <div class="row form-group">
+                                <div class="input-group input-group-sm">
+                                    <span class="input-group-addon" id="sizing-addon1">Producto:</span>
+                                    <input type="hidden" class="form-control" aria-describedby="sizing-addon1" id="idProducto" name="producto" readonly="true">
+                                    <input type="text" class="form-control" aria-describedby="sizing-addon1" id="producto" name="producto" readonly="true">
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-md-6">
+                                    <div class="input-group input-group-sm">
+                                        <span class="input-group-addon" id="sizing-addon1">L&iacute;nea:</span>
+                                        <input type="text" class="form-control" aria-describedby="sizing-addon1" id="linea" name="linea" readonly="true">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-group input-group-sm">
+                                        <span class="input-group-addon" id="sizing-addon1">Categor&iacute;a:</span>
+                                        <input type="text" class="form-control" aria-describedby="sizing-addon1" id="categoria" name="categoria" readonly="true">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-md-6">
+                                    <div class="input-group input-group-sm">
+                                        <span class="input-group-addon" id="sizing-addon1">Precio de lista:</span>
+                                        <input type="text" class="form-control number" aria-describedby="sizing-addon1" id="precioLista" name="precioLista" readonly="true">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="row form-group">
                     <div class="col-md-12">
                         <div class="input-group input-group-sm">
@@ -38,33 +76,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row form-group">
-                    <div class="col-md-12">
-                        <div class="well">
-                            <div class="row form-group">
-                                <div class="input-group input-group-sm">
-                                    <span class="input-group-addon" id="sizing-addon1">Producto:</span>
-                                    <input type="text" class="form-control" aria-describedby="sizing-addon1" id="idProducto" name="producto" readonly="true">
-                                    <input type="text" class="form-control" aria-describedby="sizing-addon1" id="producto" name="producto" readonly="true">
-                                </div>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col-md-6">
-                                    <div class="input-group input-group-sm">
-                                        <span class="input-group-addon" id="sizing-addon1">Secci&oacute;n:</span>
-                                        <input type="text" class="form-control" aria-describedby="sizing-addon1" id="seccion" name="seccion" readonly="true">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="input-group input-group-sm">
-                                        <span class="input-group-addon" id="sizing-addon1">Categor&iacute;a:</span>
-                                        <input type="text" class="form-control" aria-describedby="sizing-addon1" id="categoria" name="categoria" readonly="true">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
                 <div class="row form-group">
                     <div class="col-md-6">
                         <div class="input-group input-group-sm">
@@ -72,25 +84,26 @@
                             <input type="text" class="form-control number" aria-describedby="sizing-addon1" id="precioPromocion" name="precioPromocion" value="0.00">
                         </div>
                     </div>
-                    <div class="col-md-2 col-md-offset-3">
+                    <div class="col-md-2 col-md-offset-2">
                         <div class="input-group input-group-sm">
-                            <span class="btn btn-primary" id="agregar">Agregar</span>
+                            <span class="btn btn-primary" id="agregar">Guardar promoci&oacute;n</span>
+                            <span class="btn btn-primary" id="editar" style="display:none;">Actualizar promoci&oacute;n</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row form-group">
+<!--            <div class="row form-group">
                 <div class="col-md-2 col-md-offset-7">
                     <div class="input-group input-group-sm">
-                        <span class="btn btn-primary" id="agregar">Guardar promociones</span>
+                        <span class="btn btn-primary" id="agregar" onclick="guardarPromociones()">Guardar promociones</span>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
         <div class="col-md-6">
-            <table id="tablaPromociones" class="table table-bordered table-striped">
+            <table id="tablaPromociones" class="table table-bordered ">
                 <thead>
-                    <tr><td>idProducto</td><td>Producto</td><td>Precio</td><td>Del</td><td>Al</td><td></td></tr>
+                    <tr><td style="width:20%">idPromocion</td><td style="width:20%">Producto</td><td style="width:20%">Precio</td><td style="width:20%">Del</td><td style="width:20%">Al</td><td style="width:5%"></td><td style="width:5%"></td></tr>
                 </thead>
             </table>
         </div>
