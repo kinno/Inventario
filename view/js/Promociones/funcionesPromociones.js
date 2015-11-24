@@ -34,7 +34,7 @@ $(document).ready(function () {
 
     $('.input-daterange input').each(function () {
         $(this).datepicker({
-            format: "yyyy-mm-dd",
+            format: "dd/mm/yyyy",
         });
     });
 
@@ -100,6 +100,7 @@ function buscarProducto(CveProducto) {
                         $("#linea").val(data[i].descLinea);
                         $("#categoria").val(data[i].dscCategoria);
                         $("#precioLista").val(data[i].precio);
+                        $(".number").autoNumeric("update");
 
                     }
                 } else {

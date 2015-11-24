@@ -13,7 +13,8 @@ and open the template in the editor.
         <meta name="author" content="">
         <title>Sistema de Inventario y Ventas - Unidad Rosal</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+        <!--<link href="css/bootstrap-theme.min.css" rel="stylesheet">-->
+        <link href="css/lavish-bootstrap.css" rel="stylesheet">
         <link href="css/estilos.css" rel="stylesheet">
         <script src="js/jquery-1.11.3.js"></script>
         <script src="js/bootbox.min.js"></script>
@@ -43,7 +44,7 @@ and open the template in the editor.
                         </div>    
                     </div>
                     <div class="col-md-offset-2 col-md-10 main" id="mainContainer">
-                        <h1>PRICIPAL</h1> 
+                       
                     </div>
                 </div>
 

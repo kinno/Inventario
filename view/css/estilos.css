@@ -1,6 +1,6 @@
 .sidebar {
     position: fixed;
-    top: 51px;
+    top: 0;
     bottom: 0;
     left: 0;
     z-index: 1000;
@@ -33,7 +33,17 @@
 .table{
     font-size: 11px;
 }
-
+.table tbody{
+    font-weight: bold;
+}
 .number {
 	text-align:right;
+}
+
+#mainContainer{
+    padding-top: 10px;
+}
+
+thead tr{
+        background-color: #f5f5f5;
 }

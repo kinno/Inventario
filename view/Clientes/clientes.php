@@ -12,35 +12,38 @@
         <div class="panel-heading">
             <h3 class="panel-title"><strong>Catálogo de Clientes</strong></h3>
         </div>
-    </div>
+        <div class="panel-body">
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <div class="input-group ">
+                        <span class="btn btn-default" id="abreModal">Agregar cliente</span>
+                    </div>
+                </div>
+            </div>
 
-    <div class="row form-group">
-        <div class="col-md-12">
-            <div class="input-group ">
-                <span class="btn btn-default" id="abreModal">Agregar cliente</span>
+            <div class="row form-group">
+                <div class="col-sm-12">
+                    <div class="input-group col-sm-12">
+                        <table id="tablaClientes" class="table table-bordered hover" width="100%">
+                            <thead>
+                                <tr ><td >idCliente</td><td >Clave de cliente</td><td >Nombre</td><td >Apellido paterno</td><td >Apellido materno</td><td >Dirección</td><td >Fecha de nacimiento</td><td >Teléfono</td><td >E-mail</td><td >idTipoCliente</td><td>Tipo de cliente</td><td></td><td ></td></tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col-sm-2 col-md-offset-10">
+                    <div class="input-group ">
+                        <span class="btn btn-default" id="guardarClientes">Guardar</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="row form-group">
-        <div class="col-sm-12">
-            <div class="input-group col-sm-12">
-                <table id="tablaClientes" class="table table-bordered" width="100%">
-                    <thead>
-                        <tr ><td >idCliente</td><td >Clave de cliente</td><td >Nombre</td><td >Apellido paterno</td><td >Apellido materno</td><td >Dirección</td><td >Fecha de nacimiento</td><td >Teléfono</td><td >E-mail</td><td >idTipoCliente</td><td>Tipo de cliente</td><td></td><td ></td></tr>
-                    </thead>
-                </table>
-            </div>
-        </div>
-    </div>
 
-    <div class="row form-group">
-        <div class="col-sm-2 col-md-offset-10">
-            <div class="input-group ">
-                <span class="btn btn-default" id="guardarClientes">Guardar</span>
-            </div>
-        </div>
-    </div>
 
 
     <div id="modalCliente" class="modal fade modal-wide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">

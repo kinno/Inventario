@@ -48,6 +48,18 @@ $(document).ready(function () {
 
 //    $("input [type=date]").datepicker();
     $(".number").autoNumeric();
+    
+    $("#piezas").TouchSpin({
+        min: 0,
+        max: 100,
+        step: 1,
+        decimals: 0,
+        maxboostedstep: 10,
+        verticalbuttons: true,
+        verticalupclass: 'glyphicon glyphicon-plus',
+        verticaldownclass: 'glyphicon glyphicon-minus'
+    });
+    
     $("#abreModal").click(function () {
         limpiar("modalProductos");
         $("#actualizarProducto").hide();
@@ -119,6 +131,7 @@ function editar(elem) {
     $("#piezas").val(datosFila[8]);
     $("#actualizarProducto").show();
     $("#agregaProducto").hide();
+    $(".number").autoNumeric("update");
     $("#modalProductos").modal("show");
 }
 

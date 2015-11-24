@@ -87,7 +87,7 @@ class promocionModel {
         $fechaFinal = $promociones['fechaFinal'];
 
         if ($idPromocion == "") { // NUEVO REGRISTRO
-            $query = "INSERT INTO promocion(idProducto,precioPromocion,fechaInicio,fechaFinal) VALUES($idProducto,$precioPromocion,'$fechaInicio','$fechaFinal')";
+            $query = "INSERT INTO promocion(idProducto,precioPromocion,fechaInicio,fechaFinal) VALUES($idProducto,$precioPromocion,STR_TO_DATE('$fechaInicio','%d/%m/%Y'),STR_TO_DATE('$fechaFinal','%d/%m/%Y'))";
             ChromePhp::log($query);
             try {
                 $rs = $cnx->Execute($query);
@@ -98,7 +98,7 @@ class promocionModel {
                 return $idProductosAdd;
             }
         } else { //ACTUALIZACION DE PRODUCTO
-            $query = "UPDATE promocion set idProducto = $idProducto, precioPromocion=$precioPromocion,fechaInicio = '$fechaInicio',fechaFinal='$fechaFinal' WHERE idPromocion = $idPromocion";
+            $query = "UPDATE promocion set idProducto = $idProducto, precioPromocion=$precioPromocion,fechaInicio = STR_TO_DATE('$fechaInicio','%d/%m/%Y'),fechaFinal=STR_TO_DATE('$fechaFinal','%d/%m/%Y') WHERE idPromocion = $idPromocion";
             try {
                 $rs = $cnx->Execute($query);
                 $idProductosAdd['mesaje'] = "ok";

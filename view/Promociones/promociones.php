@@ -18,6 +18,7 @@
     <div class="row form-group">
         <div class="col-md-6">
             <div class="panel panel-default panel-body inputsPrincipales">
+                <!--<div class="inputsPrincipales">-->
                 <div class="row form-group">
                     <div class="col-md-7">
                         <div class="input-group input-group-sm">
@@ -27,43 +28,45 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="row form-group">
                     <div class="col-md-12">
-                        <div class="well">
-                            <div class="row form-group">
+                        <!--                        <div class="well">-->
+                        <div class="row form-group">
+                            <div class="col-md-12">
                                 <div class="input-group input-group-sm">
                                     <span class="input-group-addon" id="sizing-addon1">Producto:</span>
                                     <input type="hidden" class="form-control" aria-describedby="sizing-addon1" id="idProducto" name="producto" readonly="true">
                                     <input type="text" class="form-control" aria-describedby="sizing-addon1" id="producto" name="producto" readonly="true">
                                 </div>
                             </div>
-                            <div class="row form-group">
-                                <div class="col-md-6">
-                                    <div class="input-group input-group-sm">
-                                        <span class="input-group-addon" id="sizing-addon1">L&iacute;nea:</span>
-                                        <input type="text" class="form-control" aria-describedby="sizing-addon1" id="linea" name="linea" readonly="true">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="input-group input-group-sm">
-                                        <span class="input-group-addon" id="sizing-addon1">Categor&iacute;a:</span>
-                                        <input type="text" class="form-control" aria-describedby="sizing-addon1" id="categoria" name="categoria" readonly="true">
-                                    </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-6">
+                                <div class="input-group input-group-sm">
+                                    <span class="input-group-addon" id="sizing-addon1">L&iacute;nea:</span>
+                                    <input type="text" class="form-control" aria-describedby="sizing-addon1" id="linea" name="linea" readonly="true">
                                 </div>
                             </div>
-                            <div class="row form-group">
-                                <div class="col-md-6">
-                                    <div class="input-group input-group-sm">
-                                        <span class="input-group-addon" id="sizing-addon1">Precio de lista:</span>
-                                        <input type="text" class="form-control number" aria-describedby="sizing-addon1" id="precioLista" name="precioLista" readonly="true">
-                                    </div>
+                            <div class="col-md-6">
+                                <div class="input-group input-group-sm">
+                                    <span class="input-group-addon" id="sizing-addon1">Categor&iacute;a:</span>
+                                    <input type="text" class="form-control" aria-describedby="sizing-addon1" id="categoria" name="categoria" readonly="true">
                                 </div>
                             </div>
                         </div>
+                        <div class="row form-group">
+                            <div class="col-md-6">
+                                <div class="input-group input-group-sm">
+                                    <span class="input-group-addon" id="sizing-addon1">Precio de lista:</span>
+                                    <input type="text" class="form-control number" aria-describedby="sizing-addon1" id="precioLista" name="precioLista" readonly="true">
+                                </div>
+                            </div>
+                        </div>
+                        <!--</div>-->
                     </div>
                 </div>
-                
+
                 <div class="row form-group">
                     <div class="col-md-12">
                         <div class="input-group input-group-sm">
@@ -76,7 +79,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="row form-group">
                     <div class="col-md-6">
                         <div class="input-group input-group-sm">
@@ -92,16 +95,16 @@
                     </div>
                 </div>
             </div>
-<!--            <div class="row form-group">
-                <div class="col-md-2 col-md-offset-7">
-                    <div class="input-group input-group-sm">
-                        <span class="btn btn-primary" id="agregar" onclick="guardarPromociones()">Guardar promociones</span>
-                    </div>
-                </div>
-            </div>-->
+            <!--            <div class="row form-group">
+                            <div class="col-md-2 col-md-offset-7">
+                                <div class="input-group input-group-sm">
+                                    <span class="btn btn-primary" id="agregar" onclick="guardarPromociones()">Guardar promociones</span>
+                                </div>
+                            </div>
+                        </div>-->
         </div>
         <div class="col-md-6">
-            <table id="tablaPromociones" class="table table-bordered ">
+            <table id="tablaPromociones" class="table table-bordered hover">
                 <thead>
                     <tr><td style="width:20%">idPromocion</td><td style="width:20%">Producto</td><td style="width:20%">Precio</td><td style="width:20%">Del</td><td style="width:20%">Al</td><td style="width:5%"></td><td style="width:5%"></td></tr>
                 </thead>
